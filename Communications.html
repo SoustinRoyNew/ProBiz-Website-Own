@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+            rel="stylesheet">
+        <link rel="stylesheet" href="analytics.css">
+        <link rel="stylesheet" href="comms.css">
+        <!-- <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css"
+            rel="stylesheet" type="text/css" /> -->
+        <title>ProBiz - Communications</title>
+
+        <script type="text/javascript"
+            src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Sales'],
+          ['Jan',  75000],
+          ['Feb',  37000],
+          ['Mar',  50000],
+          ['Apr',  112000],
+          ['May',  90000],
+          ['Jun',  90000],
+          ['Jul',  90000],
+          ['Aug',  90000],
+          ['Sep',  90000],
+          ['Oct',  90000],
+          ['Nov',  90000],
+          ['Dec',  90000],
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    </head>
+
+    <body
+        style="transform: scale(0.99); justify-content: center; align-items: center;">
+
+        <div class="container" style="max-width: 100%;">
+            <!-- Sidebar Section -->
+            <aside>
+                <div class="toggle">
+                    <div class="logo logo-light">
+                        <img src="images/ProBiz Circle.png">
+                        <!-- <h2>Asmr<span class="danger">Prog</span></h2> -->
+                    </div>
+                    <div class="logo logo-dark" style="visibility: hidden;">
+                        <img src="images/profile-2.jpg">
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <a href="./index.html">
+                        <span class="material-icons-sharp">
+                            dashboard
+                        </span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="./Employees.html">
+                        <span class="material-icons-sharp">
+                            person_outline
+                        </span>
+                        <h3>Employees</h3>
+                    </a>
+                    <a href="./Analytics.html">
+                        <span class="material-icons-sharp">
+                            insights
+                        </span>
+                        <h3>Analytics</h3>
+                    </a>
+                    <a href="./Mail.html">
+                        <span class="material-icons-sharp">
+                            mail_outline
+                        </span>
+                        <h3>Mails</h3>
+                        <span class="message-count">27</span>
+                    </a>
+                    <a href="./Mail.html">
+                        <span class="material-icons-sharp">
+                            mail_outline
+                        </span>
+                        <h3>Mails</h3>
+                    </a>
+                    <a href="./News.html">
+                        <span class="material-icons-sharp">
+                            feed
+                        </span>
+                        <h3>News Feed</h3>
+                    </a>
+                    <a href="./Reviews.html">
+                        <span class="material-icons-sharp">
+                            reviews
+                        </span>
+                        <h3>Reviews</h3>
+                        <span class="message-count">6</span>
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">
+                            chat
+                        </span>
+                        <h3>Contact Us</h3>
+                    </a>
+                    <!-- <a href="#">
+                        <span class="material-icons-sharp">
+                            settings
+                        </span>
+                        <h3>Settings</h3>
+                    </a> -->
+                    <!-- <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a> -->
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            logout
+                        </span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+            <!-- End of Sidebar Section -->
+
+            <!-- Main Content -->
+            <main>
+                <!-- <form action="https://formsubmit.co/your@email.com"
+                    method="POST">
+                    <input type="text" name="name" required> Name
+                    <input type="email" name="email" required> Email
+                    <button type="submit">Send</button>
+                </form> -->
+                <div class="contact-container">
+                    <form action="https://api.web3forms.com/submit" class="contact-left" method="POST">
+                        <div class="contact-left-title">
+                            <h2>Get in touch</h2>
+                            <hr>
+                        </div>
+
+                        <input type="hidden" name="access_key" value="3e7aea96-6c66-49cb-a918-6131ac3a5bf7">
+
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                        <button type="submit">
+                            Submit
+                            <span class="material-icons-sharp">
+                                arrow_right_alt
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </main>
+            <!-- End of Main Content -->
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <div class="nav">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp">
+                            menu
+                        </span>
+                    </button>
+                    <div class="dark-mode">
+                        <span class="material-icons-sharp active">
+                            light_mode
+                        </span>
+                        <span class="material-icons-sharp">
+                            dark_mode
+                        </span>
+                    </div>
+
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Reza</b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="images/profile-1.jpg">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End of Nav -->
+
+            </div>
+
+        </div>
+
+        <script src="orders.js"></script>
+        <script src="analytics.js"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    </body>
+
+</html>
